@@ -189,7 +189,7 @@ slick {
   fetchSize = 5000
   db {
     # Changes to slick.db.url value must also be reflected in liquibase.properties
-    url = "jdbc:mysql://sqlproxy:3306/rawls?requireSSL=false&useSSL=false&rewriteBatchedStatements=true&useCursorFetch=true"
+    url = "jdbc:mysql://sqlproxy:3306/rawls?useSSL=true&requireSSL=true&verifyServerCertificate=true&rewriteBatchedStatements=true&useCursorFetch=true"
     # Changes to slick.db.driver value must also be reflected in liquibase.properties
     driver = com.mysql.jdbc.Driver
     user = "{{ $rawlsConf.slick_db_user }}"
